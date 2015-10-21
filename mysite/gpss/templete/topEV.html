@@ -1,0 +1,13 @@
+<h1>{{ poll.question }}</h1>
+
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+<form method="post" action="/gpss/post/test/">{% csrf_token %}
+<p>id：<input type="text" name="id"></p>
+<p>名前：<input type="text" name="name"></p>
+<p>緯度：<input type="text" name="latitude"></p>
+<p>経度：<input type="text" name="longitude"></p>
+<p><input type="submit" value="送信する"></p>
+
+</form>
+
