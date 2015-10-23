@@ -12,7 +12,7 @@ var socket = io.connect('http://localhost');
 		var lat = $('#lat');
 		var long = $('#long');
 	//	console.log(u_id);
-		socket.emit('msg send', {u_id:u_id.val(),name:name.val(),lat:lat.val(),long:long.val()});
+		socket.emit('msg send', {u_id:u_id.val(),name:name.val(),g_id:g_id.val(),lat:lat.val(),long:long.val()});
 	});
 
 	socket.on('msg push', function (msg) {
